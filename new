@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+	srand((unsigned)time(0));
+	cout << "«Î ‰»Î˜ª◊”µƒ√Ê ˝£®1Ω´±ª ”Œ™100£©£¨ªÚ ‰»Î0“‘“ª¥ŒÕ∂∂‡∏ˆ˜ª◊”°£\n";
+	while(1){
+		int input;
+		cin >> input;
+		if(input == 1) input = 100;
+		if(input){
+			cout << "Õ∂≥ˆ" << (rand() % input + 1) << endl;
+		}else{
+			int count, sum = 0;
+			cout << "∏ˆ ˝£ø\n";
+			cin >> count;
+			cout << "√Ê ˝£ø\n";
+			cin >> input;
+			for(int i=0; i<count; ++i) sum += (rand() % input + 1);
+			cout << "Õ∂≥ˆ◊‹µ„ ˝Œ™" << sum << endl;
+		}
+	};
+} 
